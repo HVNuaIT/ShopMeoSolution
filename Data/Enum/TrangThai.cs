@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.DatabaseContext
+namespace Domain.Enum
 {
-    public class Database : DbContext
+    public enum TrangThai
     {
+        None,
+        Active
     }
 }

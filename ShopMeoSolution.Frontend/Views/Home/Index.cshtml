@@ -1,8 +1,64 @@
-﻿@{
+﻿@using System.Web;
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+@* <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+</div> *@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       
+  
+    </head>
+
+    <body>
+     
+    <h1 style="color: red;">Cùng đếm ngược để chửi thằng tài nào</h1>
+    <div  style="color:blue" class="container">
+        
+            <p style="background-size:500px " id="demo"></p>
+        <p > <img id="hinh" /></p>
+
+        @*  <p style="background-size:200px " id="demo"></p> *@
+    </div>
+    </body>
+
+</html>
+<script>
+  
+
+    var countDownDate = new Date("October 17, 2023 14:48:25").getTime();
+   
+    // Cập nhật đếm ngược sau mỗi 1 giây
+    var x = setInterval(function () {
+        // Nhận ngày và giờ hôm nay
+        var now = new Date().getTime();
+
+        // Tìm khoảng cách giữa bây giờ và ngày đếm ngược
+        var distance = countDownDate - now;
+
+        // Tính toán thời gian cho ngày, giờ, phút và giây
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Xuất kết quả trong phần tử có id = "demo"
+        document.getElementById("demo").innerHTML = days + "Ngày " + hours + "Giờ "
+            + minutes + "Phút " + seconds + "Giây";
+
+        // Nếu quá trình đếm ngược kết thúc, hãy viết một số văn bản
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Tài Non Vãi LoL";
+            let img = document.createElement('img');
+            img.src = "/css/Img/Tai.jpg";
+            document.body.appendChild(img);
+        }
+    }, 1000);
+</script>

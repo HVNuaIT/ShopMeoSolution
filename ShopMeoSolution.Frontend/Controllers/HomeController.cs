@@ -15,6 +15,7 @@ namespace ShopMeoSolution.Frontend.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 

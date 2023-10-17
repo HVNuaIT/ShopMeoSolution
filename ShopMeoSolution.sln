@@ -5,11 +5,11 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82CE4BBF-1E63-457E-BF8A-02B3AB083AF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMeoSolution.Backend", "ShopMeoSolution.Backend\ShopMeoSolution.Backend.csproj", "{EF2EAABF-EA30-43CC-8B43-A3E00CB84FB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.Backend", "ShopMeoSolution.Backend\ShopMeoSolution.Backend.csproj", "{EF2EAABF-EA30-43CC-8B43-A3E00CB84FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{C359D2A2-AEEB-462D-A46D-95DB06A621DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Data\Domain.csproj", "{C359D2A2-AEEB-462D-A46D-95DB06A621DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMeoSolution.Frontend", "ShopMeoSolution.Frontend\ShopMeoSolution.Frontend.csproj", "{DFEBFDD4-A286-4A35-A65E-AFAE9834CC7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.Frontend", "ShopMeoSolution.Frontend\ShopMeoSolution.Frontend.csproj", "{DFEBFDD4-A286-4A35-A65E-AFAE9834CC7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Item", "Solution Item", "{B2791FBF-6B04-433A-919A-F087809CDF29}"
 	ProjectSection(SolutionItems) = preProject
