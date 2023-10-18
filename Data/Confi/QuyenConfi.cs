@@ -9,17 +9,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Confi
 {
-    public class QuyenConfi : IEntityTypeConfiguration<Quyen>
+    public class QuyenConfi : IEntityTypeConfiguration<RoleIdentity>
     {
-        public void Configure(EntityTypeBuilder<Quyen> builder)
+        public void Configure(EntityTypeBuilder<RoleIdentity> builder)
         {
             builder.ToTable("Role");
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).ValueGeneratedOnAdd();
-            builder.Property(x => x.TenQuyen).HasDefaultValue(10).IsRequired();
-           
-
-
+            builder.Property(x => x.MoTa).HasMaxLength(200).IsRequired();
         }
     }
 }

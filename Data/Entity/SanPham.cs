@@ -23,6 +23,8 @@ namespace Domain.Entity
         public TrangThai TrangThai { get; set; }
         public int IdDanhMuc { get; set; }
         public DanhMuc ?DanhMuc { get; set;}
+        public List<Cart>? Carts { get; set; }
+        
 
     }
 }
