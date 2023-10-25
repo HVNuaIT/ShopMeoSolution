@@ -1,13 +1,13 @@
-﻿using Domain.Entity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ShopMeoSolution.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Confi
+namespace ShopMeoSolution.Domain.Confi
 {
     public class SanPhamDanhMucConfi : IEntityTypeConfiguration<SanPhamDanhMuc>
     {
@@ -15,9 +15,9 @@ namespace Domain.Confi
         {
             builder.ToTable("SanPhamDanhMuc");
             builder.HasKey(x => new { x.IdSanPham, x.IdDanhMuc });
-          //  builder.HasOne(x => x.SanPham).WithMany(x=>x.SanPhamDanhMuc).HasForeignKey(x=>x.IdSanPham).OnDelete(DeleteBehavior.Restrict);
-           // builder.HasOne(x => x.DanhMuc).WithMany(x => x.SanPhamDanhMuc).HasForeignKey(x => x.IdDanhMuc).OnDelete(DeleteBehavior.Restrict);
-            
+            //  builder.HasOne(x => x.SanPham).WithMany(x=>x.SanPhamDanhMuc).HasForeignKey(x=>x.IdSanPham).OnDelete(DeleteBehavior.Restrict);
+            // builder.HasOne(x => x.DanhMuc).WithMany(x => x.SanPhamDanhMuc).HasForeignKey(x => x.IdDanhMuc).OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

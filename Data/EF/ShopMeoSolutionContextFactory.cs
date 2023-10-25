@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.EF
+namespace ShopMeoSolution.Domain.EF
 {
     public class ShopMeoSolutionContextFactory : IDesignTimeDbContextFactory<ShopMeoDbContext>
     {

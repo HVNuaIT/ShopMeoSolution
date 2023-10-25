@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entity
+namespace ShopMeoSolution.Domain.Entity
 {
-    public class RoleIdentity:IdentityRole<Guid>
+    public class RoleIdentity : IdentityRole<Guid>
     {
-        public string MoTa { get; set; }= string.Empty;
+        public string MoTa { get; set; } = string.Empty;
     }
 }

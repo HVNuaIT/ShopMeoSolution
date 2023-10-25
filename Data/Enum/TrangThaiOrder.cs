@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Enum
+namespace ShopMeoSolution.Domain.Enum
 {
     public enum TrangThaiOrder
     {
-       Successful,
-       Pending,
+        Successful,
+        Pending,
         Cancel
     }
 }

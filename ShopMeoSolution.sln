@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82CE4BBF-1E6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.Backend", "ShopMeoSolution.Backend\ShopMeoSolution.Backend.csproj", "{EF2EAABF-EA30-43CC-8B43-A3E00CB84FB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Data\Domain.csproj", "{C359D2A2-AEEB-462D-A46D-95DB06A621DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.Domain", "Data\ShopMeoSolution.Domain.csproj", "{C359D2A2-AEEB-462D-A46D-95DB06A621DA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.Frontend", "ShopMeoSolution.Frontend\ShopMeoSolution.Frontend.csproj", "{DFEBFDD4-A286-4A35-A65E-AFAE9834CC7C}"
 EndProject
@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Item", "Solution I
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopMeoSolution.Application", "ShopMeoSolution.Application\ShopMeoSolution.Application.csproj", "{982D6CD5-E187-46AE-A7D2-9F5AEC5D482B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.Application", "ShopMeoSolution.Application\ShopMeoSolution.Application.csproj", "{982D6CD5-E187-46AE-A7D2-9F5AEC5D482B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopMeoSolution.ViewModel", "ShopMeoSolution.ViewModel\ShopMeoSolution.ViewModel.csproj", "{84D66D6F-58EE-401C-8FE3-978C1593E796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,10 @@ Global
 		{982D6CD5-E187-46AE-A7D2-9F5AEC5D482B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{982D6CD5-E187-46AE-A7D2-9F5AEC5D482B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{982D6CD5-E187-46AE-A7D2-9F5AEC5D482B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D66D6F-58EE-401C-8FE3-978C1593E796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D66D6F-58EE-401C-8FE3-978C1593E796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D66D6F-58EE-401C-8FE3-978C1593E796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D66D6F-58EE-401C-8FE3-978C1593E796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

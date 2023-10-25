@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopMeoSolution.Domain.Enum
+namespace ShopMeoSolution.ViewModel.Catalog.SanPham.Client
 {
-    public enum TrangThai
+    public class GetListSanPham
     {
-        None,
-        Active
     }
 }

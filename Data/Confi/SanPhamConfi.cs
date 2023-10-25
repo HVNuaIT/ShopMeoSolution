@@ -1,7 +1,7 @@
-﻿using Domain.Entity;
-using Domain.Enum;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ShopMeoSolution.Domain.Entity;
+using ShopMeoSolution.Domain.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Confi
+namespace ShopMeoSolution.Domain.Confi
 {
     public class SanPhamConfi : IEntityTypeConfiguration<SanPham>
     {
@@ -21,11 +21,7 @@ namespace Domain.Confi
             builder.Property(x => x.TenSanPham).HasMaxLength(100).IsRequired();
             builder.Property(x => x.MoTa).HasMaxLength(200).IsRequired();
             builder.Property(x => x.SoLuong).IsRequired();
-            builder.Property(x => x.Hinh).IsRequired();
             builder.Property(x => x.TrangThai).HasDefaultValue(TrangThai.Active).IsRequired();
-            builder.Property(x => x.File).IsUnicode(true);
-
-
         }
     }
 }

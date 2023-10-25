@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Domain.Migrations
 {
-    public partial class One : Migration
+    public partial class Od : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -143,8 +143,6 @@ namespace Domain.Migrations
                     TenSanPham = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     Gia = table.Column<double>(type: "float", nullable: false),
-                    Hinh = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    File = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     MoTa = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     TrangThai = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
                     IdDanhMuc = table.Column<int>(type: "int", nullable: false)
@@ -172,7 +170,7 @@ namespace Domain.Migrations
                     SDTNhan = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     TrangThaiOrder = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
                     EmailNhan = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false),
-                    NgayOrder = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 10, 18, 20, 23, 26, 268, DateTimeKind.Local).AddTicks(5338))
+                    NgayOrder = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 10, 23, 22, 10, 8, 448, DateTimeKind.Local).AddTicks(4135))
                 },
                 constraints: table =>
                 {
@@ -215,6 +213,28 @@ namespace Domain.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HinhAnh",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdSanPham = table.Column<int>(type: "int", nullable: false),
+                    NgayTao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DuongDanImg = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    KichThuc = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HinhAnh", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_HinhAnh_SanPham_IdSanPham",
+                        column: x => x.IdSanPham,
+                        principalTable: "SanPham",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SanPhamDanhMuc",
                 columns: table => new
                 {
@@ -240,6 +260,16 @@ namespace Domain.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "DanhMuc",
+                columns: new[] { "Id", "TenDanhMuc", "TrangThai" },
+                values: new object[] { 1, "Meo Itali", 1 });
+
+            migrationBuilder.InsertData(
+                table: "SanPham",
+                columns: new[] { "Id", "Gia", "IdDanhMuc", "MoTa", "SoLuong", "TenSanPham", "TrangThai" },
+                values: new object[] { 1, 200000.0, 1, "Dep va giong hiem", 120, "Meo 1 ", 1 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Cart_IdSanPham",
                 table: "Cart",
@@ -249,6 +279,11 @@ namespace Domain.Migrations
                 name: "IX_Cart_IdUser",
                 table: "Cart",
                 column: "IdUser");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HinhAnh_IdSanPham",
+                table: "HinhAnh",
+                column: "IdSanPham");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Order_IdUser",
@@ -275,6 +310,9 @@ namespace Domain.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Cart");
+
+            migrationBuilder.DropTable(
+                name: "HinhAnh");
 
             migrationBuilder.DropTable(
                 name: "Order");

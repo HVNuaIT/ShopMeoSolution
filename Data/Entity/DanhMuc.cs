@@ -1,4 +1,4 @@
-﻿using Domain.Enum;
+﻿using ShopMeoSolution.Domain.Enum;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entity
+namespace ShopMeoSolution.Domain.Entity
 {
 
     public class DanhMuc
@@ -16,7 +16,7 @@ namespace Domain.Entity
         public int Id { get; set; }
         public string TenDanhMuc { get; set; } = string.Empty;
         public TrangThai TrangThai { get; set; }
-        public List<SanPham>? SanPhams { get; set; }  
-       // public List<SanPhamDanhMuc> SanPhamDanhMuc { get; set; }
+        public List<SanPham>? SanPhams { get; set; }
+        // public List<SanPhamDanhMuc> SanPhamDanhMuc { get; set; }
     }
 }
